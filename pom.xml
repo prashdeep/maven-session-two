@@ -12,6 +12,7 @@
     <jersey.version>2.25</jersey.version>
     <build.number>SNAPSHOT</build.number>
   </properties>
+
   <build>
     <plugins>
       <plugin>
@@ -98,7 +99,7 @@
             <systemPropertyVariables>
               <coverage-output>html</coverage-output>
               <coverage-metrics>all</coverage-metrics>
-              <coverage-classes>com.hexaware.ftp27.model.*</coverage-classes>
+              <coverage-classes>com.classpath.ftp27.model.*</coverage-classes>
               <coverage-check>85</coverage-check>
             </systemPropertyVariables>
           </configuration>
@@ -113,15 +114,6 @@
           <artifactId>maven-checkstyle-plugin</artifactId>
           <version>2.17</version>
         </plugin>
-        <plugin>
-          <groupId>org.jacoco</groupId>
-          <artifactId>jacoco-maven-plugin</artifactId>
-          <version>0.8.6-SNAPSHOT</version>
-          <executions>
-            <execution>
-              <id>default-prepare-agent</id>
-              <goals>
-                <goal>prepare-agent</goal></goals></execution><execution><id>default-report</id><goals><goal>report</goal></goals></execution><execution><id>default-check</id><goals><goal>check</goal></goals><configuration><rules><rule><element>BUNDLE</element><limits><limit><counter>COMPLEXITY</counter><value>COVEREDRATIO</value><minimum>0.60</minimum></limit></limits></rule></rules></configuration></execution></executions></plugin>
       </plugins>
     </pluginManagement>
     </build>
@@ -164,6 +156,16 @@
       <groupId>org.apache.commons</groupId>
       <artifactId>commons-email</artifactId>
       <version>1.5</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-core</artifactId>
+      <version>5.1.9.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.17</version>
     </dependency>
     <dependency>
       <groupId>org.jdbi</groupId>

@@ -48,7 +48,7 @@ public class EmployeeTest {
     long empLeaveAvail = employee.getEmpLeaveAvail();
     assertEquals(empLeaveAvail, 50);
     int empMgrId = employee.getEmpMgrId();
-    assertEquals(empMgrId, 1000);
+    assertEquals(empMgrId, 2000);
   }
   /**
    * Employee getempId.
